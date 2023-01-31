@@ -25,17 +25,6 @@ tablero_vacio(){
    echo
   done
 }
-tablero_vacio
-# prompt para que el usuario introduzca las coordenadas de tiro
-read -p "Introduce una coordenada de tiro: " disparo
-#echo $disparo
-# Aquí extraemos el primer numero de las cifras introducidas como fila
-fila="${disparo:0:1}"
-# Aquí extraemos el segundo número de las cifras introducidas como columna
-columna="${disparo:1:1}"
-#echo $fila, $columna
-# Llamamos a la función e introducimos los parámetros de tiro
-tablero $fila $columna
 
 tablero(){
 
@@ -107,6 +96,18 @@ tablero_doble(){
       printf "\n"
   done
 }
+tablero_vacio
+# prompt para que el usuario introduzca las coordenadas de tiro
+read -p "Introduce una coordenada de tiro: " disparo
+#echo $disparo
+# Aquí extraemos el primer numero de las cifras introducidas como fila
+fila="${disparo:0:1}"
+# Aquí extraemos el segundo número de las cifras introducidas como columna
+columna="${disparo:1:1}"
+#echo $fila, $columna
+# Llamamos a la función e introducimos los parámetros de tiro
+tablero $fila $columna
+
 
 tablero_doble_barcos(){
   echo "         Radar                     Barcos"

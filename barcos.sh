@@ -107,6 +107,17 @@ columna="${disparo:1:1}"
 #echo $fila, $columna
 # Llamamos a la función e introducimos los parámetros de tiro
 tablero $fila $columna
+# Segundo disparo
+# prompt para que el usuario introduzca las coordenadas de tiro
+read -p "Introduce una coordenada de tiro: " disparo
+#echo $disparo
+# Aquí extraemos el primer numero de las cifras introducidas como fila
+fila2="${disparo:0:1}"
+# Aquí extraemos el segundo número de las cifras introducidas como columna
+columna2="${disparo:1:1}"
+#echo $fila, $columna
+# Llamamos a la función e introducimos los parámetros de tiro
+tablero $fila2 $columna2
 
 
 tablero_doble_barcos(){
